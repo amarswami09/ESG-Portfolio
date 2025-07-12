@@ -71,6 +71,132 @@
       transform: translateY(-5px);
     }
 
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Amar Swami</h1>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark Mode</button>
+  </header>
+
+  <section class="intro">
+    <h2>Aspiring ESG Professional</h2>
+    <p>Exploring ESG insights across industries. Below are summaries of select companies evaluated for their Environmental, Social, and Governance performance.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>Company 1 – Tech Sector</h3>
+      <p>Brief ESG summary here. Click to view full report. (Linked or expandable in future.)</p>
+    </div>
+    <div class="card">
+      <h3>Company 2 – Energy Sector</h3>
+      <p>Brief ESG summary here.</p>
+    </div>
+    <div class="card">
+      <h3>Company 3 – Consumer Goods</h3>
+      <p>Brief ESG summary here.</p>
+    </div>
+    <div class="card">
+      <h3>Company 4 – Financial Services</h3>
+      <p>Brief ESG summary here.</p>
+    </div>
+    <div class="card">
+      <h3>Company 5 – Manufacturing</h3>
+      <p>Brief ESG summary here.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Amar Swami · Connect on <a href="https://www.linkedin.com/in/" target="_blank">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    }
+  </script>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amar Swami - ESG Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --card: #f4f4f4;
+      --accent: #2563eb;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0e0e0e;
+      --text: #f5f5f5;
+      --card: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toggle-theme {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    .intro {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .card a {
       display: inline-block;
       margin-top: 0.5rem;
